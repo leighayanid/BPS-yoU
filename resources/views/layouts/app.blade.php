@@ -21,6 +21,16 @@
 			@yield('welcome header')
 		@endif
 		<div class="container">
+
+			<div class="row">
+				<div class="col-md-3">
+					<center><h4>Categories</h4></center>
+				</div>
+				<div class="col-md-9">
+					<a href="{{ route('threads.create') }}" class="btn btn-primary pull-right">Create thread</a>
+				</div>
+			</div><!-- end of row -->
+
 			<div class="row">
 				<div class="col-md-3">
 					@include('layouts.partials.categories')
@@ -28,9 +38,10 @@
 				<div class="col-md-9">
 					@yield('content')
 				</div>
-			</div>
-		</div>
-	</div>
+			</div><!-- end of row -->
+
+		</div> <!-- end of container -->
+	</div> <!-- end of app -->
 
 	<!-- Scripts -->
 	<script src="{{ asset('js/app.js') }}"></script>
