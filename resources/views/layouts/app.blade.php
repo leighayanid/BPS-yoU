@@ -21,7 +21,8 @@
 			@yield('welcome header')
 		@endif
 		<div class="container">
-
+			@include('layouts.partials.error')
+			@include('layouts.partials.success')
 			<div class="row">
 				<div class="col-md-3">
 					<center><h4>Categories</h4></center>

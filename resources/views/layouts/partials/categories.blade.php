@@ -1,6 +1,5 @@
-
 <ul class="list-group">
-<li class="list-group-item">
+	<li class="list-group-item">
 		<span class="badge">500</span>
 		All Threads
 	</li>
