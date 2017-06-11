@@ -4,9 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Thread;
+use App\Http\Requests\ThreadRequest;
 
 class ThreadsController extends Controller
 {
+
+    public function __contruct(){
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -34,9 +39,11 @@ class ThreadsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ThreadRequest $request)
     {
-        //
+        $input = $request->all();
+        Thread::create($input);
+        return redirect('threads')->withMessage('Thread created.');
     }
 
     /**
