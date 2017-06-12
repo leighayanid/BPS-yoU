@@ -10,3 +10,5 @@
 		</center>
 	@endforelse
 </div>
+
+{{ $threads->links() }}
