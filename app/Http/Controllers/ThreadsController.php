@@ -9,8 +9,8 @@ use App\Http\Requests\ThreadRequest;
 class ThreadsController extends Controller
 {
 
-    public function __contruct(){
-        $this->middleware('auth');
+    public function __construct(){
+        return $this->middleware('auth')->except('index');
     }
     /**
      * Display a listing of the resource.

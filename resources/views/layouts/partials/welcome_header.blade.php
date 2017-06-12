@@ -9,7 +9,7 @@
 				<h2>Welcome, Peninsulares!</h2>
 				<p>Asks questions that matter. <br>Make friends. <br>Talk to your fellow students and alumni.</p>
 				<p>
-					<a href="/threads" class="btn btn-primary">Explore</a>
+					<a href="/threads" class="btn btn-primary btn-lg">Explore</a>
 				</p>
 			</div> <!--end of col-->
 			<div class="col-md-6 col-lg-6 col-xs-12">
