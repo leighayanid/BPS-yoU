@@ -42,7 +42,7 @@ class ThreadsController extends Controller
     public function store(ThreadRequest $request)
     {
         $input = $request->all();
-        Thread::create($input);
+        auth()->user()->threads()->create($input);
         return redirect('threads')->withMessage('Thread created.');
     }
 

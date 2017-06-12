@@ -1,8 +1,9 @@
 <div class="jumbotron">
 	<div class="container">
 		<center>
-			<h1>BPS-yoU!<small> Students and alumni portal</small></h1>
+			<h1>BPS-yoU!<small> Students and alumni portal</small></h1><br>
 		</center>
+		<hr>
 		<br>
 		<div class="row">
 			<div class="col-md-6 col-lg-6 col-xs-12">
