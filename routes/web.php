@@ -12,9 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+		$threads = App\Thread::latest()->paginate(20);
+    return view('welcome', compact('threads'));
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// resource route for threads
+Route::resource('threads', 'ThreadsController');
