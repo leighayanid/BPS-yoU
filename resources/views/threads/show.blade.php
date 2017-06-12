@@ -6,6 +6,7 @@
 			<div class="page-header">
 				{{ $thread->subject }}
 			</div>
+			@if(auth()->user()->id == $thread->user_id)
 			<div class="pull-right action-buttons">
 				<a href="{{ route('threads.edit',$thread->id) }}" class="btn btn-info delete-button">Edit thread</a>
 				<form action="{{ route('threads.destroy', $thread->id) }}" method="POST" role="form">
@@ -15,6 +16,7 @@
 				</form>
 			</div>
 			<div>
+			@endif
 				<p>{{ $thread->type }}</p>
 				<p>{{ $thread->thread }}</p>
 			</div>
