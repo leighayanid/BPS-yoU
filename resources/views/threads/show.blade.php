@@ -7,11 +7,11 @@
 				{{ $thread->subject }}
 			</div>
 			<div class="pull-right action-buttons">
-				<a href="{{ route('threads.edit',$thread->id) }}" class="btn btn-info">Edit thread</a>
+				<a href="{{ route('threads.edit',$thread->id) }}" class="btn btn-info delete-button">Edit thread</a>
 				<form action="{{ route('threads.destroy', $thread->id) }}" method="POST" role="form">
 					{{ csrf_field() }}
 					{{ method_field('DELETE') }}
-					<button type="submit" class="btn btn-danger">Delete</button>
+					<button type="submit" class="btn btn-danger delete-button">Delete</button>
 				</form>
 			</div>
 			<div>
