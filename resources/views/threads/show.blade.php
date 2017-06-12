@@ -18,7 +18,7 @@
 			<div>
 			@endif
 				<p>{{ $thread->type }}</p>
-				<p>{{ $thread->thread }}</p>
+				<p>{!! \Michelf\Markdown::defaultTransform($thread->thread) !!}</p>
 			</div>
 		</div>
 	</div>
