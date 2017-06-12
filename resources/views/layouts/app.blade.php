@@ -12,7 +12,7 @@
 
 	<!-- Styles -->
 	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
-	<link rel="stylesheet" href="http://bootswatch.com/journal/bootstrap.min.css">
+	<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 </head>
 <body>
 	<div id="app">
@@ -31,7 +31,7 @@
 					<a href="{{ route('threads.create') }}" class="btn btn-primary pull-right">Create thread</a>
 				</div>
 			</div><!-- end of row -->
-
+			<br>
 			<div class="row">
 				<div class="col-md-3">
 					@include('layouts.partials.categories')

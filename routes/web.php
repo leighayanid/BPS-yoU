@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-		$threads = App\Thread::paginate(2);
+		$threads = App\Thread::latest()->paginate(20);
     return view('welcome', compact('threads'));
 });
 

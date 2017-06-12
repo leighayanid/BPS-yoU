@@ -15,8 +15,8 @@
 			<div class="col-md-6 col-lg-6 col-xs-12">
 				<br>
 				<center style="margin: 0% 20%;">
-					<a href="/register" class="btn btn-success btn-lg btn-block">Create your account now.</a><br>
-					<a href="/login" class="btn btn-success btn-lg btn-block">Sign In</a>
+					<a href="/register" class="btn btn-info btn-lg btn-block">Create your account now.</a><br>
+					<a href="/login" class="btn btn-info btn-lg btn-block">Sign In</a>
 				</center>
 			</div>
 		</div><!-- end of row-->

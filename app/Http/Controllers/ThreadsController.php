@@ -54,7 +54,8 @@ class ThreadsController extends Controller
      */
     public function show($id)
     {
-        //
+        $thread = Thread::findOrFail($id);
+        return view('threads.show')->with('thread',$thread);
     }
 
     /**
@@ -63,9 +64,9 @@ class ThreadsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Thread $thread)
     {
-        //
+        return view('threads.edit')->with('thread', $thread);
     }
 
     /**
@@ -75,9 +76,10 @@ class ThreadsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ThreadRequest $request, Thread $thread)
     {
-        //
+       $thread->update($request->all());
+       return redirect()->route('threads.show', $thread->id)->withMessage("Thread updated.");
     }
 
     /**
@@ -86,8 +88,9 @@ class ThreadsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Thread $thread)
     {
-        //
+        $thread->delete();
+        return redirect('threads');
     }
 }
