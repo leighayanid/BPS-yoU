@@ -17,6 +17,9 @@
 				<label for="">Thread</label>
 				<textarea  name="thread" id="" class="form-control" rows="5" required="required" value="{{ old('thread')}}"></textarea>
 			</div>
+			<div class="form-group">
+					{!! app('captcha')->display(); !!}
+			</div>
 			<button type="submit" class="btn btn-primary">Submit</button>
 		</form>
 	</div>

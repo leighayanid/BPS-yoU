@@ -24,9 +24,10 @@ class ThreadRequest extends FormRequest
     public function rules()
     {
         return [
-            'subject' => 'required|min:10',
-            'thread' => 'required|min:20',
-            'type' => 'required'
+            'subject' => 'required|min:5',
+            'thread' => 'required|min:10',
+            'type' => 'required',
+            'g-recaptcha-response' => 'required|captcha',
         ];
     }
 }
