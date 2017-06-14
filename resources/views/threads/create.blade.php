@@ -2,6 +2,7 @@
 
 @section('content')
 	<div class="col-md-8 col-md-offset-2">
+		@include('layouts.partials.error')
 		<form action="{{ route('threads.store') }}" method="POST" role="form">
 			{{ csrf_field() }}
 			<legend>What do you want to talk about?</legend>

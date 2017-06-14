@@ -22,3 +22,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // resource route for threads
 Route::resource('threads', 'ThreadsController');
+
+//resource route for comments
+Route::resource('comments', 'CommentController', ['only'=>['edit','destroy']]);
+
+//route for creating comment
+Route::post('comments/create/{thread}', 'CommentController@addCommentToThread')->name('threadcomment.store');
