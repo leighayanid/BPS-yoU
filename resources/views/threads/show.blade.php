@@ -17,7 +17,7 @@
 			@endif
 			<br>
 			<h3>{{ ucfirst(trans($thread->subject)) }}</h3>
-				<p>{{ $thread->type }}</p>
+				<p class="text-muted">Sent to {{ ucfirst(trans($thread->type)) }} {{ $thread->created_at->diffForHumans() }}, {{ $thread->created_at->format('d-m-Y') }}</p>
 				<p>{!! \Michelf\Markdown::defaultTransform($thread->thread) !!}</p>
 		<br>
 		
