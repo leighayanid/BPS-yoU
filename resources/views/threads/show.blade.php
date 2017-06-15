@@ -6,7 +6,6 @@
 			
 			@include('layouts.partials.error')
 
-			<h3>{{ ucfirst(trans($thread->subject)) }}</h3>
 			@if(auth()->user()->id == $thread->user_id)
 				<div class="pull-right action-buttons">
 					<a href="{{ route('threads.edit',$thread->id) }}" class="btn btn-info delete-button">Edit thread</a>
@@ -17,6 +16,8 @@
 					</form>
 				</div>
 			@endif
+			<br>
+			<h3>{{ ucfirst(trans($thread->subject)) }}</h3>
 				<p>{{ $thread->type }}</p>
 				<p>{!! \Michelf\Markdown::defaultTransform($thread->thread) !!}</p>
 		<br>
