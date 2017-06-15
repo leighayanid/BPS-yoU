@@ -2,7 +2,6 @@
 
 @section('content')
 	<div class="row">
-		<div class="col-md-9">
 			
 			@include('layouts.partials.error')
 
@@ -25,8 +24,6 @@
 		@include('threads.partials.comment_list')
 
 		@include('threads.partials.create_comment')
-
-	</div>
 
 </div>
 
