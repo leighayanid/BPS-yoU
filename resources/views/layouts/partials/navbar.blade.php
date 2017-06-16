@@ -24,11 +24,12 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{ route('threads.create') }}">New Thread <i class="fa fa-plus"></i></a></li>
+                <li><a href="{{ route('threads.create') }}">New Thread  <i class="fa fa-plus"></i></a></li>
+                <li><a href="">Peninsulares  <i class="fa fa-user"></i></a></li>
                 <!-- Authentication Links -->
                 @if (Auth::guest())
-                    <li><a href="{{ route('login') }}">Login</a></li>
-                    <li><a href="{{ route('register') }}">Register</a></li>
+                    <li><a href="{{ route('login') }}">Login <i class="fa fa-sign-in"></i></a></li>
+                    <li><a href="{{ route('register') }}">Register <i class="fa fa-lock"></i></a></li>
                 @else
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

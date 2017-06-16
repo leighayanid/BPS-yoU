@@ -1,7 +1,7 @@
 <ul class="list-group">
 	<li class="list-group-item">
-		<span class="badge">500</span>
-		All Threads
+		<span class="badge">100</span>
+		<a href="{{ route('threads.index')}}">All Threads</a>
 	</li>
 	<li class="list-group-item">
 		<span class="badge">5</span>
