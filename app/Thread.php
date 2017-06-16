@@ -3,14 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Cviebrock\EloquentSluggable\Sluggable;
 
 class Thread extends Model
 {
 
-	use Sluggable;
-
-	protected $fillable=['subject', 'type', 'thread', 'user_id', 'slug'];
+	protected $fillable=['subject', 'type', 'thread', 'user_id'];
 
 	// creates relationship to user
 	public function user(){
@@ -20,19 +17,5 @@ class Thread extends Model
 	public function comments(){
 		return $this->morphMany('App\Comment', 'commentable');
 	}
-
-	 /**
-     * Return the sluggable configuration array for this model.
-     *
-     * @return array
-     */
-    public function sluggable()
-    {
-        return [
-            'slug' => [
-                'source' => 'subject'
-            ]
-        ];
-    }
 
 }

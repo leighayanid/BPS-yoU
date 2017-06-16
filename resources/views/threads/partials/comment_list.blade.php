@@ -12,10 +12,21 @@
 			<div class="comment-list">
 				<h5>{!! \Michelf\Markdown::defaultTransform(ucfirst(trans($comment->body))) !!}</h5>
 				<h6>replied by {{ $comment->user->name }}</h6>
-			</div>
+				<!-- reply to comment -->
+				<div class="reply-list">
+					@forelse($comment->comments as $reply)
+						<p class="text-info">{{ $reply->body }}</p>
+						<p class="text-muted">replied by {{ $reply->user->name }}</p>
+					@empty
+					
+					@endforelse
+				</div> <!-- end of reply list-->
+				
+					@include('threads.partials.reply_modal')
+			</div> <!-- end of comment list-->
+			
+			
 		</div><!-- end of well -->
-
-
 	@empty
 		<div class="well">
 			<h5 class="text-center">No comments here. Be the first to reply.. <i class="fa fa-comments"></i></h5>

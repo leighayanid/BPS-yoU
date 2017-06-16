@@ -16,7 +16,7 @@
 			</div>
 			<div class="form-group">
 				<label for="">Thread</label>
-				<textarea  name="thread" id="" class="form-control" rows="5" required="required" value="{{ old('thread')}}"></textarea>
+				<textarea  name="thread" id="" class="form-control" rows="10" required="required" value="{{ old('thread')}}"></textarea>
 			</div>
 			<div class="form-group">
 					{!! app('captcha')->display(); !!}
