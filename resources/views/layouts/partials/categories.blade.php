@@ -1,38 +1,32 @@
 <ul class="list-group">
 	<li class="list-group-item">
-		<span class="badge">100</span>
-		<a href="{{ route('threads.index')}}">All Threads</a>
+		<a href="{{ route('threads.index')}}">General Threads</a>
 	</li>
 	<li class="list-group-item">
-		<span class="badge">5</span>
-		College of Information and Communication Technology
+		<a href="">College of Information and Communication Technology</a>
 	</li>
 	<li class="list-group-item">
-		<span class="badge">10</span>
-		College of Engineering and Architecture
+		<a href="">College of Engineering and Architecture</a>
 	</li>
 	<li class="list-group-item">
-		<span class="badge">15</span>
-		College of Nursing and Midwifery
+		<a href="">College of Nursing and Midwifery</a>
 	</li>
 	<li class="list-group-item">
-		<span class="badge">15</span>
-		College of Arts and Sciences
+		<a href="">College of Arts and Sciences</a>
 	</li>
 	<li class="list-group-item">
-		<span class="badge">15</span>
-		College of Industrial Technology
+
+		<a href="">College of Industrial Technology</a>
 	</li>
 	<li class="list-group-item">
-		<span class="badge">15</span>
-		College of Technical Vocational
+		<a href="">College of Technical Vocational</a>
 	</li>
 	<li class="list-group-item">
-		<span class="badge">15</span>
-		College of Business Administration
+
+		<a href="">College of Business Administration</a>
 	</li>
 	<li class="list-group-item">
-		<span class="badge">15</span>
-		College of Education
+
+		<a href="">College of Education</a>
 	</li>
 </ul>

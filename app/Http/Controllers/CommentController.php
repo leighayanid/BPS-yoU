@@ -37,7 +37,6 @@ class CommentController extends Controller
 		$comment->comments()->save($reply);
 
 		return back();
-
 	}
 
 

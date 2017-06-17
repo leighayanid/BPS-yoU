@@ -14,12 +14,10 @@
 				<h6>replied by {{ $comment->user->name }}</h6>
 				<!-- reply to comment -->
 				<div class="reply-list">
-					@forelse($comment->comments as $reply)
-						<p class="text-info">{{ $reply->body }}</p>
-						<p class="text-muted">replied by {{ $reply->user->name }}</p>
-					@empty
-					
-					@endforelse
+					@foreach($comment->comments as $reply)
+						<p>{{ $reply->body }}</p>
+						<p>replied by {{ $reply->user->name }}</p>
+					@endforeach
 				</div> <!-- end of reply list-->
 				
 					@include('threads.partials.reply_modal')
