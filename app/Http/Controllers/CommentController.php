@@ -28,7 +28,7 @@ class CommentController extends Controller
 		/**
 		create reply to comment
 	**/
-	public function addReplyToComment(CommentRequest $request, Comment $comment){
+	public function addReplyToComment(Request $request, Comment $comment){
 	
 		$reply = new Comment();
 		$reply->body = $request->body;

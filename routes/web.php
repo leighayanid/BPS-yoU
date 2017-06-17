@@ -28,5 +28,6 @@ Route::resource('comments', 'CommentController', ['only'=>['update','destroy']])
 
 //route for creating comment
 Route::post('comments/create/{thread}','CommentController@addCommentToThread')->name('threadcomment.store');
+
 //route for replying to comment
-Route::post('comments/create/{comment}','CommentController@addReplyToComment')->name('replycomment.store');
+Route::post('reply/create/{comment}','CommentController@addReplyToComment')->name('replycomment.store');

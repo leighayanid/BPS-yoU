@@ -8,7 +8,7 @@
 		<div class="row">
 			<div class="col-md-6 col-lg-6 col-xs-12">
 				<h2>Welcome, Peninsulares!</h2>
-				<p>Asks questions.<br>Make Threads.<br>Talk to your fellow students and alumni.</p>
+				<p>Asks questions.<br>Make threads.<br>Talk to your fellow students and alumni.</p>
 				<p>
 					<a href="/threads" class="btn btn-primary btn-lg">Explore</a>
 				</p>
