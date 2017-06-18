@@ -30,7 +30,8 @@ class ThreadsController extends Controller
      */
     public function create()
     {
-       return view('threads.create');
+       $types = ['College of Information and Communication Technology', 'College of Engineering and Architecture', 'College of Nursing and Midwifery', 'College of Industrial Technology', 'College of Business Administration','College of Technical Vocational Technology', 'College of Education', 'College of Agriculture'];
+       return view('threads.create', compact('types'));
     }
 
     /**

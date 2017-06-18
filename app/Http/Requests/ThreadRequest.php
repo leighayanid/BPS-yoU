@@ -27,7 +27,7 @@ class ThreadRequest extends FormRequest
             'subject' => 'required|min:5',
             'thread' => 'required|min:10',
             'type' => 'required',
-            'g-recaptcha-response' => 'required|captcha',
+            // 'g-recaptcha-response' => 'required|captcha',
         ];
     }
 }

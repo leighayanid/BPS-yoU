@@ -1,14 +1,14 @@
 <div class="jumbotron">
 	<div class="container">
 		<center>
-			<h1>BPS-yoU!<small> Students and alumni portal</small></h1><br>
+			<h1>BPS-yoU!<small> Students and Alumni Forum</small></h1><br>
 		</center>
 		<hr>
 		<br>
 		<div class="row">
 			<div class="col-md-6 col-lg-6 col-xs-12">
 				<h2>Welcome, Peninsulares!</h2>
-				<p>Asks questions that matter. <br>Make friends. <br>Talk to your fellow students and alumni.</p>
+				<p>Asks questions.<br>Make threads.<br>Talk to your fellow students and alumni.</p>
 				<p>
 					<a href="/threads" class="btn btn-primary btn-lg">Explore</a>
 				</p>

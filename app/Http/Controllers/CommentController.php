@@ -25,6 +25,21 @@ class CommentController extends Controller
 
 	}
 
+		/**
+		create reply to comment
+	**/
+	public function addReplyToComment(Request $request, Comment $comment){
+	
+		$reply = new Comment();
+		$reply->body = $request->body;
+		$reply->user_id = auth()->user()->id;
+		//save the comment
+		$comment->comments()->save($reply);
+
+		return back();
+	}
+
+
 	/**
 	 * Show the form for editing the specified resource.
 	 *
