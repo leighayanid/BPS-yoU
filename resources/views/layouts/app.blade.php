@@ -35,6 +35,7 @@
 			</div><!-- end of row -->
 
 		</div> <!-- end of container -->
+		@yield('js')
 	</div> <!-- end of app -->
 
 	<!-- Scripts -->

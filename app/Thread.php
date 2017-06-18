@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class Thread extends Model
-{
+{	
 
 	protected $fillable=['subject', 'type', 'thread', 'user_id'];
 
@@ -15,7 +15,7 @@ class Thread extends Model
 	}
 
 	public function comments(){
-		return $this->morphMany(Comment::class, 'commentable');
+		return $this->morphMany(Comment::class, 'commentable')->latest();
 	}
 
 }

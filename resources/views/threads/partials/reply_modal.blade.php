@@ -1,5 +1,3 @@
-<a data-toggle="modal" href="#modal-id"><span class="fa fa-reply"></span></a>
-<a data-toggle="modal" href="#modal-id"><span class="fa fa-heart"></span></a>
 <div class="modal fade" id="modal-id">
   <div class="modal-dialog">
     <div class="modal-content">
