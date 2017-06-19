@@ -29,6 +29,10 @@
 
 @endsection
 
+@section('sidebar')
+	@include('layouts.partials.categories')
+@endsection
+
 @section('js')
     <script>
        function toggleReply(commentId){
