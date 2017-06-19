@@ -21,10 +21,19 @@
 			@endif
 			<br>
 		
+		@include('threads.partials.create_comment')
 		@include('threads.partials.comment_list')
 
-		@include('threads.partials.create_comment')
 
 </div>
+
+@endsection
+
+@section('js')
+    <script>
+       function toggleReply(commentId){
+           $('.reply-form-'+commentId).toggleClass('hidden');
+       }
+		</script>
 
 @endsection

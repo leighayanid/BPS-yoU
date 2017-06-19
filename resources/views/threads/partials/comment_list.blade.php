@@ -1,5 +1,5 @@
 <div class="comments">	
-
+	<h4>There are {{ $thread->comments->count() }} comments found on this thread.</h4>
 	@forelse($thread->comments as $comment)
 		<div class="well">
 			@if(auth()->user()->id == $thread->user_id)
@@ -14,20 +14,12 @@
 			<div class="comment-list">
 				<h5>{!! \Michelf\Markdown::defaultTransform(ucfirst(trans($comment->body))) !!}</h5>
 				<h6>replied by {{ $comment->user->name }}</h6>
-				<a data-toggle="modal" href="#modal-id"><span class="fa fa-reply"></span></a>
-				<a data-toggle="modal" href="#modal-id"><span class="fa fa-heart"></span></a>
+				<span class="fa fa-reply" onclick="toggleReply('{{ $comment->id }}')"></span>
 				<!-- reply to comment -->
 			</div> <!-- end of comment list-->
-			<div class="reply-list" style="margin-left: 50px;">
-				@foreach($comment->comments as $reply)
-					<hr>
-					<h5>{{ $reply->body }}</h5>
-					<h6>replied by {{ $reply->user->name }}</h6>
-					<a data-toggle="modal" href="#modal-id"><span class="fa fa-reply"></span></a>
-				@endforeach
-			</div> <!-- end of reply list-->
-			
-				@include('threads.partials.reply_modal')
+		
+				@include('threads.partials.reply_list')			
+				@include('threads.partials.reply_form')
 			
 		</div><!-- end of well -->
 	@empty
@@ -37,3 +29,14 @@
 	@endforelse
 
 </div>
+
+@section('js')
+
+    <script>
+        function toggleReply(commentId){
+            $('.reply-form-'+commentId).toggleClass('hidden');
+        }
+
+    </script>
+
+@endsection
