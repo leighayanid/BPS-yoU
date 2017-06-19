@@ -30,7 +30,7 @@
 					@yield('content')
 				</div>
 				<div class="col-md-3">
-					@include('layouts.partials.categories')
+					@yield('sidebar')
 				</div>
 			</div><!-- end of row -->
 

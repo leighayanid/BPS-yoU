@@ -74,3 +74,8 @@
     </div>
 </div>
 @endsection
+
+@section('sidebar')
+    @include('layouts.partials.categories')
+@endsection
+
