@@ -6,14 +6,7 @@
 
 	<div class="user-threads">
 		<h3>Threads.</h3>
-		@foreach($threads as $thread)
-			<div class="list-group">
-				<a href="{{ route('threads.show', $thread->id) }}" class="list-group-item active">
-					<h4 class="list-group-item-heading">{{ $thread->subject }}</h4>
-					<p class="list-group-item-text">Added thread {{ $thread->created_at->diffForHumans()}}</p>
-				</a>
-			</div>
-		@endforeach
+		@include('threads.partials.thread_list')
 	</div>
 
 	<hr>
