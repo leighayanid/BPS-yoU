@@ -4,6 +4,8 @@
 	<h3>{{ $user-> name }}</h3>
 	<h4>{{ $user->email }}</h4>
 
+	<hr>
+
 	<div class="user-threads">
 		<h3>Threads.</h3>
 		@include('threads.partials.thread_list')
@@ -26,5 +28,5 @@
 @endsection
 
 @section('sidebar')
-
+	@include('layouts.partials.categories')
 @endsection

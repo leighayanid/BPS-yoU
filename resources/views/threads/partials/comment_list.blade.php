@@ -1,5 +1,6 @@
 <div class="comments">	
 	<h4>There are {{ $thread->comments->count() }} comments found on this thread.</h4>
+		<hr>
 		@forelse($thread->comments as $comment)
 			<div class="well">
 				@if(auth()->user()->id == $thread->user_id)
