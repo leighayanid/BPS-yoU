@@ -16,6 +16,7 @@
 					<h5>{!! \Michelf\Markdown::defaultTransform(ucfirst(trans($comment->body))) !!}</h5>
 					<h6>replied by {{ $comment->user->name }}</h6>
 					<span class="fa fa-reply" onclick="toggleReply('{{ $comment->id }}')"></span>
+					<span class="fa fa-heart-o" onclick="likeComment('{{ $comment->id }}', this)"></span>
 					<!-- reply to comment -->
 				</div> <!-- end of comment list-->
 			
@@ -37,6 +38,14 @@
             $('.reply-form-'+commentId).toggleClass('hidden');
         }
 
+        function likeComment(commentId, el){
+        	var csrfToken = '{{ csrf_token() }}';
+        	$.post('{{route('like')}}',{ commentId: commentId, _token: csrfToken}, function(data){
+        		console.log(data);
+        		$(el).css({color: 'red'});
+        	});
+
+        }
     </script>
 
 @endsection
