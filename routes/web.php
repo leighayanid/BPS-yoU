@@ -33,5 +33,5 @@ Route::post('comments/create/{thread}','CommentController@addCommentToThread')->
 Route::post('reply/create/{comment}','CommentController@addReplyToComment')->name('replycomment.store');
 
 //route for user profile
-Route::get('user/profile/{user}', 'UserProfileController@index')->name('user_profile');
+Route::get('/{user}', 'UserProfileController@index')->name('user_profile');
 
