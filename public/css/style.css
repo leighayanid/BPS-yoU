@@ -4,3 +4,7 @@
 .action-buttons a, form, button{
 	display: inline;
 }
+
+.liked{
+	color:red;
+}

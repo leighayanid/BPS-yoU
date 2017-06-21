@@ -5,6 +5,6 @@
 		<h5>{{ $reply->body }}</h5>
 		<h6>replied by {{ $reply->user->name }}</h6>
 	<span class="fa fa-reply" onclick="toggleReply('{{ $comment->id }}')"></span>
-	<span class="fa fa-heart-o" onclick="likeComment('{{ $comment->id }}', this)"></span>
+	<span class="fa fa-heart " onclick="likeComment('{{ $comment->id }}', this)"></span>
 	@endforeach
 </div> <!-- end of reply list-->
