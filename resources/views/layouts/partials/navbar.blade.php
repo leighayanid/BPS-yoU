@@ -21,6 +21,15 @@
             <ul class="nav navbar-nav">
                 &nbsp;
             </ul>
+            <ul class="nav navbar-nav">
+                <form action="{{ route('threads.index') }}" class="form-inline" method="get" role="form">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="search" name="search" id="input" class="form-control" value="{{ isset($search) ? $search : ''}}" required="required" title="" placeholder="Search here..">
+                        </div>
+                    </div>
+                </form>
+            </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">

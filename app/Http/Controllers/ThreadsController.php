@@ -17,10 +17,13 @@ class ThreadsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $threads = Thread::latest()->paginate(15);
-        return view('threads.index', compact('threads'));
+        $search = $request->input('search');
+
+        $threads = Thread::latest()
+            ->search($search)->paginate(15);
+        return view('threads.index', compact('threads', 'search'));
     }
 
     /**
