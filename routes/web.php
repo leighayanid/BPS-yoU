@@ -35,3 +35,5 @@ Route::post('reply/create/{comment}','CommentController@addReplyToComment')->nam
 //route for user profile
 Route::get('/{user}', 'UserProfileController@index')->name('user_profile');
 
+//route for like
+Route::post('/comment/like', 'LikeController@likeComment')->name('like');

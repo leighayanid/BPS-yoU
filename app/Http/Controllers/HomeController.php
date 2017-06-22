@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $threads = Thread::paginate(5);
+        $threads = Thread::paginate(20);
        return view('welcome', compact('threads'));
     }
 }

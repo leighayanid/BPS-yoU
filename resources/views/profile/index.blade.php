@@ -18,7 +18,7 @@
 		@forelse($comments as $comment)
 			<div class="list-group">
 				<a href="#" class="list-group-item active">
-					<h4 class="list-group-item-heading">{{ $user->name}} commented on {{ $comment->commentable->subject }} {{ $comment->created_at->diffForHumans() }}</h4>
+					<h5 class="list-group-item-heading">{{ $user->name}} commented on {{ $comment->commentable->subject }} {{ $comment->created_at->diffForHumans() }}</h5>
 				</a>
 			</div>
 		@empty
