@@ -17,7 +17,7 @@
 					<h6>replied by {{ $comment->user->name }}</h6>
 					<span class="fa fa-reply" onclick="toggleReply('{{ $comment->id }}')"></span>
 					<span class="fa fa-heart {{ $comment->isLiked()?'liked':''}}" onclick="likeComment('{{ $comment->id }}', this)"></span>
-					<span class="hidden" id="{{ $comment->id }}-count">{{ $comment->likes()->count() }}</span>
+					<span id="{{ $comment->id }}-count">{{ $comment->likes()->count() }}</span>
 					<!-- reply to comment -->
 				</div> <!-- end of comment list-->
 			
@@ -50,6 +50,21 @@
             }else{
               $(el).removeClass('liked');
               $('#'+commentId+"-count").text(likesCount-1);
+           	}
+        	});
+        }
+
+        function likeReply(replyId,el){
+        	var csrfToken = '{{ csrf_token() }}';
+        	var likesCount = parseInt($('#'+replyId+"-count").text());
+        	$.post('{{route('like')}}',{ commentId: replyId, _token: csrfToken}, function(data){
+        		console.log(data);
+        		if(data.message==='liked'){
+              $(el).addClass('liked');
+              $('#'+replyId+"-count").text(likesCount+1);
+            }else{
+              $(el).removeClass('liked');
+              $('#'+replyId+"-count").text(likesCount-1);
            	}
         	});
 
