@@ -23,8 +23,8 @@
             </ul>
             <div class="col-sm-3 col-md-3">
                 <form action=" {{ route('threads.index') }}" method="get" class="navbar-form navbar-left" role="search">
-                <div class="input-group">
-                    <input type="text" class="form-control" value="{{ isset($s) ? $s : ''}}" placeholder="Search threads here" name="search">
+                <div class="input-group" style="height: 30px;">
+                    <input id="navbar-search" style="width: 450px !important;"type="text" class="form-control" value="{{ isset($s) ? $s : ''}}" placeholder="Search threads here" name="search">
                     <div class="input-group-btn">
                         <button class="btn btn-info" type="submit"><i class="fa fa-search"></i></button>
                     </div>
