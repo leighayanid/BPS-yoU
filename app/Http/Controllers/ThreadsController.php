@@ -19,11 +19,10 @@ class ThreadsController extends Controller
      */
     public function index(Request $request)
     {
-        $search = $request->input('search');
-
+        $s = $request->input('s');
         $threads = Thread::latest()
-            ->search($search)->paginate(15);
-        return view('threads.index', compact('threads', 'search'));
+            ->search($s)->paginate(20);
+        return view('threads.index', compact('threads', 's'));
     }
 
     /**

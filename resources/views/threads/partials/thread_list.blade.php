@@ -10,5 +10,5 @@
 		</center>
 	@endforelse
 </div>
-
-{{ $threads->appends(['search' => $search])->links() }}
+	
+{{ $threads->appends(['search' => $s])->render() }}

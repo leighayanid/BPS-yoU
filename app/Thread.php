@@ -18,9 +18,9 @@ class Thread extends Model
 		return $this->morphMany(Comment::class, 'commentable')->latest();
 	}
 
-	public function scopeSearch($query, $search){
-		return $query->where('subject', 'like', '%' .$search. '%')
-			->orWhere('thread', 'like', '%' .$search. '%');
+	public function scopeSearch($query, $s){
+		return $query->where('subject', 'like', '%' .$s. '%')
+			->orWhere('thread', 'like', '%' .$s. '%');
 	}
 
 }
