@@ -17,6 +17,17 @@
         </div>
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
+
+             <div class="col-sm-3 col-md-3">
+            <form action=" {{ route('threads.index') }}" method="get" class="navbar-form" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" value="{{ isset($s) ? $s : ''}}" placeholder="Search threads here" name="s">
+                    <div class="input-group-btn">
+                        <button class="btn btn-info" type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
                 &nbsp;
