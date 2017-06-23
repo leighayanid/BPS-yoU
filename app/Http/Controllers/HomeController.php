@@ -1,3 +1,4 @@
+
 <?php
 
 namespace App\Http\Controllers;
@@ -24,8 +25,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        /* $threads = Thread::paginate(20);
-       // return view('welcome', compact('threads'));*/
         return redirect('threads');
     }
 }

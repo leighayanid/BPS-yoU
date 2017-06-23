@@ -10,10 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Http\Request;
 
-Route::get('/', function () {
+Route::get('/', function (Request $request) {
+		$s = $request->input('search');
 		$threads = App\Thread::latest()->paginate(20);
-    return view('welcome', compact('threads'));
+    return view('welcome', compact('threads', 's'));
 });
 
 Auth::routes();
