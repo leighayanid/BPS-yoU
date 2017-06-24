@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+    @include('layouts.partials.success')
     <div class="row">
         <div class="col-md-9">
             <div class="panel panel-default">
