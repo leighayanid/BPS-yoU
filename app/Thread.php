@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Thread extends Model
 {	
 
-	use LikableTrait;
+	use VotableTrait;
 	
 	protected $fillable=['subject', 'type', 'thread', 'user_id'];
 

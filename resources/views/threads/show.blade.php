@@ -1,17 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-	<div class="row">
-			
-			@include('layouts.partials.error')
+	<div class="row">	
+		@include('layouts.partials.error')
 			<div class="col-md-1">
 				<div style="margin-top: 20%;">
 					<center>
-						<span class="text-center fa fa-caret-up fa-3x {{ $thread->isLiked()?'liked':''}}" onclick="likeThread('{{ $thread->id }}', this)"></span>
+						<span class="text-center fa fa-caret-up fa-3x {{ $thread->isVoted()?'liked':''}}" onclick="voteThread('{{ $thread->id }}', this)"></span>
 					</center>	
-					<h4 class="text-center" id="{{ $thread->id }}-count">{{ $thread->likes()->count() }}</h4>
+					<h4 class="text-center" id="{{ $thread->id }}-count">{{ $thread->votes()->count() }}</h4>
 					<center>
-						<span class="text-center fa fa-caret-down fa-3x {{ $thread->isLiked()?'liked':''}}" onclick="likeThread('{{ $thread->id }}', this)"></span>
+						<span class="text-center fa fa-caret-down fa-3x {{ $thread->isVoted()?'':'liked'}}" onclick="voteThread('{{ $thread->id }}', this)"></span>
 					</center>	
 				</div>
 			</div>
