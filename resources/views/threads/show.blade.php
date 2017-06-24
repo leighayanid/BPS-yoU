@@ -4,7 +4,6 @@
 	<div class="row">
 			
 			@include('layouts.partials.error')
-
 			<div class="col-md-1">
 				<div style="margin-top: 20%;">
 					<center>
@@ -18,6 +17,17 @@
 			</div>
 
 			<div class="col-md-10">
+				<div class="pull-right">
+					<li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fa fa-caret-down fa-2x"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="">	Mark as inappropriate</a></li>
+                <li><a href="">	Report this</a></li>
+            </ul>
+        	</li>
+				</div>
+
 					<h3>{{ ucfirst(trans($thread->subject)) }}</h3>
 					<p class="text-muted">Sent to {{ ucfirst(trans($thread->type)) }} {{ $thread->created_at->diffForHumans() }}, {{ $thread->created_at->format('d-m-Y') }}</p>
 					<p>{!! \Michelf\Markdown::defaultTransform($thread->thread) !!}</p>
