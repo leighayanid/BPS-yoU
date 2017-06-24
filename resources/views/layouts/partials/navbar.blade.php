@@ -43,6 +43,7 @@
                 @else
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <img src="{{ Gravatar::src(Auth::user()->email, 25) }}" alt="" class="img-circle">
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
 
