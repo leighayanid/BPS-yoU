@@ -38,38 +38,21 @@
         function toggleReply(commentId){
             $('.reply-form-'+commentId).toggleClass('hidden');
         }
-
-        function likeComment(commentId,el){
+        
+        function likeComment(id,el){
         	var csrfToken = '{{ csrf_token() }}';
-        	var likesCount = parseInt($('#'+commentId+"-count").text());
-        	$.post('{{route('like')}}',{ commentId: commentId, _token: csrfToken}, function(data){
+        	var likesCount = parseInt($('#'+id+"-count").text());
+        	$.post('{{route('like')}}',{ commentId: id, _token: csrfToken}, function(data){
         		console.log(data);
         		if(data.message==='liked'){
               $(el).addClass('liked');
-              $('#'+commentId+"-count").text(likesCount+1);
+              $('#'+id+"-count").text(likesCount+1);
             }else{
               $(el).removeClass('liked');
-              $('#'+commentId+"-count").text(likesCount-1);
+              $('#'+id+"-count").text(likesCount-1);
            	}
         	});
         }
-
-        function likeReply(replyId,el){
-        	var csrfToken = '{{ csrf_token() }}';
-        	var likesCount = parseInt($('#'+replyId+"-count").text());
-        	$.post('{{route('like')}}',{ commentId: replyId, _token: csrfToken}, function(data){
-        		console.log(data);
-        		if(data.message==='liked'){
-              $(el).addClass('liked');
-              $('#'+replyId+"-count").text(likesCount+1);
-            }else{
-              $(el).removeClass('liked');
-              $('#'+replyId+"-count").text(likesCount-1);
-           	}
-        	});
-
-        }
-
     </script>
 
 @endsection

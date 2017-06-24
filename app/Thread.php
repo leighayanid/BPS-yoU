@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Thread extends Model
 {	
 
+	use LikableTrait;
+	
 	protected $fillable=['subject', 'type', 'thread', 'user_id'];
 
 	// creates relationship to user
