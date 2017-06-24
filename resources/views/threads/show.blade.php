@@ -6,8 +6,15 @@
 			@include('layouts.partials.error')
 
 			<div class="col-md-1">
-					<span class="text-center fa fa-heart fa-3x {{ $thread->isLiked()?'liked':''}}" onclick="likeThread('{{ $thread->id }}', this)" style="margin-top: 50%;"></span>
-					<h4 class="text-center" id="{{ $thread->id }}-count" style="margin-top: 20%;">{{ $thread->likes()->count() }}</h4>
+				<div style="margin-top: 20%;">
+					<center>
+						<span class="text-center fa fa-caret-up fa-3x {{ $thread->isLiked()?'liked':''}}" onclick="likeThread('{{ $thread->id }}', this)"></span>
+					</center>	
+					<h4 class="text-center" id="{{ $thread->id }}-count">{{ $thread->likes()->count() }}</h4>
+					<center>
+						<span class="text-center fa fa-caret-down fa-3x {{ $thread->isLiked()?'liked':''}}" onclick="likeThread('{{ $thread->id }}', this)"></span>
+					</center>	
+				</div>
 			</div>
 
 			<div class="col-md-10">
