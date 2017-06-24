@@ -16,15 +16,14 @@ class VoteController extends Controller
     	
     	//check first if the commnet has been liked
 
-        $vote->upvote();
-        return response()->json(['status'=>'success','message'=>'voted']);
-       /* if(!$vote->isVoted{
+        if(!$vote->isVoted()){
 
+            $vote->upvote();
+            return response()->json(['status'=>'success','message'=>'voted']);
         }else{
-
             $vote->downvote();
             return response()->json(['status'=>'success','message'=>'unvoted']);
 
-        }*/
+        }
     }
 }
