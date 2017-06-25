@@ -26,7 +26,7 @@ class ThreadRequest extends FormRequest
         return [
             'subject' => 'required|min:5',
             'thread' => 'required|min:10',
-            'type' => 'required',
+            'college' => 'required',
             // 'g-recaptcha-response' => 'required|captcha',
         ];
     }

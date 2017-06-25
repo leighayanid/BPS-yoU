@@ -11,8 +11,8 @@
 				<input type="text" class="form-control" name="subject" id="" placeholder="Input subject" value="{{ old('subject')}}">
 			</div>
 			<div class="form-group">
-				<label for="">Type</label>
-				<input type="text" class="form-control" name="type" id="" placeholder="Input type" value="{{ old('type')}}">
+				<label for="">College</label>
+				<input type="text" class="form-control" name="college" id="" placeholder="Input type" value="{{ old('college')}}">
 			</div>
 			<div class="form-group">
 				<label for="">Thread</label>

@@ -33,8 +33,8 @@
 					@yield('sidebar')
 				</div>
 			</div><!-- end of row -->
-
 		</div> <!-- end of container -->
+		@include('layouts.partials.footer')
 		@yield('js')
 	</div> <!-- end of app -->
 
