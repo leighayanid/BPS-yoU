@@ -35,10 +35,10 @@
 			</div><!-- end of row -->
 		</div> <!-- end of container -->
 		@include('layouts.partials.footer')
+		@yield('js')
 	</div> <!-- end of app -->
 
 	<!-- Scripts -->
 	<script src="{{ asset('js/app.js') }}"></script>
-	<script src="{{ asset('js/main.js')}}"></script>
 </body>
 </html>
