@@ -12,7 +12,11 @@
 			</div>
 			<div class="form-group">
 				<label for="">College</label>
-				<input type="text" class="form-control" name="college" id="" placeholder="Input type" value="{{ old('college')}}">
+				<select name="college" id="college" class="form-control" required="required" placeholder="Select your preffered college">
+					@foreach($colleges as $college)
+						<option value="{{ old('college')}}">{{ $college }}</option>
+					@endforeach
+				</select>
 			</div>
 			<div class="form-group">
 				<label for="">Thread</label>

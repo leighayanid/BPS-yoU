@@ -10,11 +10,11 @@
 
 /*footer*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
-footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', sans-serif; }
+footer { background-color:#0c1a1e; min-height:350px; }
 .footerleft { margin-top:50px; padding:0 36px; }
 .logofooter { margin-bottom:10px; font-size:25px; color:#fff; font-weight:700;}
 
-.footerleft p { color:#fff; font-size:12px !important; font-family: 'Open Sans', sans-serif; margin-bottom:15px;}
+.footerleft p { color:#fff; font-size:12px !important;margin-bottom:15px;}
 .footerleft p i { width:20px; color:#999;}
 
 .paddingtop-bottom {  margin-top:50px;}

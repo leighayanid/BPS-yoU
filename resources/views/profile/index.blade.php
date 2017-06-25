@@ -28,6 +28,7 @@
 				</a>
 			</div>
 		@empty
+			<h4 class="text-center">{{ $user->name }} doesn't commented on any posts yet.</h4>
 		@endforelse
 	</div>
 
