@@ -17,8 +17,18 @@
 				<br>
 				<center style="margin: 0% 20%;">
 					<a href="/register" class="btn btn-info btn-lg btn-block">Create your account now.</a><br>
-					<a href="/login" class="btn btn-info btn-lg btn-block">Sign In</a>
+					<a href="/login" class="btn btn-info btn-lg btn-block">Sign in with email</a>
 				</center>
+				<br>
+				<center><h5>or sign in with</h5></center>
+				<div class="row">
+					<center>
+						<a href=""><span class="fa fa-facebook fa-3x" style="margin: 10px;"></span></a>
+						<a href=""><span class="fa fa-twitter fa-3x" style="margin: 10px;"></span></a>
+						<a href=""><span class="fa fa-linkedin fa-3x" style="margin: 10px;"></span></a>
+						<a href=""><span class="fa fa-google-plus fa-3x" style="margin: 10px;"></span></a>
+					</center>
+				</div>
 			</div>
 		</div><!-- end of row-->
 	</div>
