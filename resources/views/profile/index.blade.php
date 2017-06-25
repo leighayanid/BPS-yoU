@@ -1,9 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-	<h3>{{ $user-> name }}</h3>
-	<h4>{{ $user->email }}</h4>
-
+	<div class="row">
+		<div class="col-md-2 col-md-offset-1">
+			<img src="{{ Gravatar::src($user->email, 150) }}" alt="" class="img-circle pull-right">
+		</div>
+		<div class="col-md-8">	
+			<h3>{{ $user-> name }}</h3>
+			<h4>{{ $user->email }}</h4>
+		</div>
+	</div>
 	<hr>
 
 	<div class="user-threads">

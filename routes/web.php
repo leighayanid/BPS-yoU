@@ -39,3 +39,6 @@ Route::get('/{user}', 'UserProfileController@index')->name('user_profile');
 
 //route for like
 Route::post('/comment/like', 'LikeController@likeComment')->name('like');
+
+//route for vote
+Route::post('/thread/vote', 'VoteController@voteThread')->name('vote');

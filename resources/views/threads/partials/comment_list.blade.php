@@ -16,7 +16,7 @@
 					<h5>{!! \Michelf\Markdown::defaultTransform(ucfirst(trans($comment->body))) !!}</h5>
 					<h6>replied by {{ $comment->user->name }}</h6>
 					<span class="fa fa-reply" onclick="toggleReply('{{ $comment->id }}')"></span>
-					<span class="fa fa-heart {{ $comment->isLiked()?'liked':''}}" onclick="likeComment('{{ $comment->id }}', this)"></span>
+					<span class="fa fa-heart {{ $comment->isLiked()?'':'liked'}}" onclick="likeComment('{{ $comment->id }}', this)"></span>
 					<span id="{{ $comment->id }}-count">{{ $comment->likes()->count() }}</span>
 					<!-- reply to comment -->
 				</div> <!-- end of comment list-->
@@ -33,43 +33,40 @@
 </div>
 
 @section('js')
+  <script>
 
-    <script>
         function toggleReply(commentId){
             $('.reply-form-'+commentId).toggleClass('hidden');
         }
-
-        function likeComment(commentId,el){
-        	var csrfToken = '{{ csrf_token() }}';
-        	var likesCount = parseInt($('#'+commentId+"-count").text());
-        	$.post('{{route('like')}}',{ commentId: commentId, _token: csrfToken}, function(data){
-        		console.log(data);
-        		if(data.message==='liked'){
+        
+        function likeComment(id,el){
+          var csrfToken = '{{ csrf_token() }}';
+          var likesCount = parseInt($('#'+id+"-count").text());
+          $.post('{{route('like')}}',{ commentId: id, _token: csrfToken}, function(data){
+            console.log(data);
+            if(data.message==='liked'){
               $(el).addClass('liked');
-              $('#'+commentId+"-count").text(likesCount+1);
+              $('#'+id+"-count").text(likesCount+1);
             }else{
               $(el).removeClass('liked');
-              $('#'+commentId+"-count").text(likesCount-1);
-           	}
-        	});
+              $('#'+id+"-count").text(likesCount-1);
+            }
+          });
         }
 
-        function likeReply(replyId,el){
-        	var csrfToken = '{{ csrf_token() }}';
-        	var likesCount = parseInt($('#'+replyId+"-count").text());
-        	$.post('{{route('like')}}',{ commentId: replyId, _token: csrfToken}, function(data){
-        		console.log(data);
-        		if(data.message==='liked'){
+     function voteThread(id, el){
+          var csrfToken = '{{ csrf_token() }}';
+          var votesCount = parseInt($('#'+id+"-count").text());
+          $.post('{{route('vote')}}',{ threadId: id, _token: csrfToken}, function(data){
+            console.log(data);
+            if(data.message==='voted'){
               $(el).addClass('liked');
-              $('#'+replyId+"-count").text(likesCount+1);
+              $('#'+id+"-count").text(votesCount+1);
             }else{
               $(el).removeClass('liked');
-              $('#'+replyId+"-count").text(likesCount-1);
-           	}
-        	});
-
+              $('#'+id+"-count").text(votesCount-1);
+            }
+          });
         }
-
-    </script>
-
+  </script>
 @endsection

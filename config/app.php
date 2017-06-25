@@ -164,6 +164,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
         Cviebrock\EloquentSluggable\ServiceProvider::class,
+        Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -226,6 +227,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Gravatar' => Thomaswelton\LaravelGravatar\Facades\Gravatar::class,
 
     ],
 

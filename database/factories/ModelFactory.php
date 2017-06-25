@@ -29,7 +29,7 @@ $factory->define(App\Thread::class, function (Faker\Generator $faker) {
     return [
         'subject' => $faker->sentence,
         'slug' => $faker->slug,
-        'type' => $faker->word,
+        'college' => $faker->word,
         'user_id' => rand(0,100),
         'thread' => $faker->paragraph,
     ];
