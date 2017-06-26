@@ -22,6 +22,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//resource route for all users
+Route::resource('peninsulares', 'UsersController');
+
 // resource route for threads
 Route::resource('threads', 'ThreadsController');
 
