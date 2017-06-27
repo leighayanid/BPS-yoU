@@ -28,6 +28,8 @@ Route::resource('peninsulares', 'UsersController');
 // resource route for threads
 Route::resource('threads', 'ThreadsController');
 
+Route::get('/threads/{slug}', 'ThreadsController@show');
+
 //resource route for comments
 Route::resource('comments', 'CommentController', ['only'=>['update','destroy']]);
 

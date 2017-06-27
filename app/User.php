@@ -36,4 +36,9 @@ class User extends Authenticatable
     public function getRouteKeyName(){
         return 'username';
     }
+
+    public function scopeSearch($query, $s){
+        return $query->where('name', 'like', '%' .$s. '%')
+            ->orWhere('username', 'like', '%' .$s. '%');
+    }
 }

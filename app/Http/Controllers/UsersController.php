@@ -12,22 +12,11 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::latest()->paginate(30);
-        return view('users.index', compact('users'));
-    }
-
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        $s = $request->input('search');
+        $users = User::latest()->search($s)->paginate(30);
+        return view('users.index', compact('users', 's'));
     }
 
     /**
