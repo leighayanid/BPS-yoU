@@ -24,7 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //resource route for all users
 Route::resource('peninsulares', 'UsersController');
-Route::get('edit/{user}', 'UsersController@edit')->name('edit-user');
+Route::get('{user}/edit', 'UsersController@edit')->name('edit-user');
 
 // resource route for threads
 Route::resource('threads', 'ThreadsController');

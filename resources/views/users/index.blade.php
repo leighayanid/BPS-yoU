@@ -18,6 +18,7 @@
 	<hr>
 
 	<div class="container">
+		<!-- todo change this to cards -->
 		@forelse($users as $user)
 			<div class="row">
 				<div class="col-md-1">

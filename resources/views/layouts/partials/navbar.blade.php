@@ -11,8 +11,8 @@
             </button>
 
             <!-- Branding Image -->
-            <a class="navbar-brand" href="{{ url('/') }}">
-                BPS-YOU
+            <a class="navbar-brand header" href="{{ url('/') }}">
+                BPS-yoU
             </a>
         </div>
 
