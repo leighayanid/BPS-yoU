@@ -22,8 +22,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//resource route for all users
+Route::resource('peninsulares', 'UsersController');
+Route::get('{user}/edit', 'UsersController@edit')->name('edit-user');
+
 // resource route for threads
 Route::resource('threads', 'ThreadsController');
+
+Route::get('/threads/{slug}', 'ThreadsController@show');
 
 //resource route for comments
 Route::resource('comments', 'CommentController', ['only'=>['update','destroy']]);

@@ -8,6 +8,9 @@
 		<div class="col-md-8">	
 			<h3>{{ $user-> name }}</h3>
 			<h4>{{ $user->email }}</h4>
+			@if($user == auth()->user())
+			<a href="{{ route('edit-user', $user->id) }}"><p>Edit profile</p></a>
+			@endif
 		</div>
 	</div>
 	<hr>

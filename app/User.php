@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 
 class User extends Authenticatable
 {
@@ -34,5 +35,10 @@ class User extends Authenticatable
 
     public function getRouteKeyName(){
         return 'username';
+    }
+
+    public function scopeSearch($query, $s){
+        return $query->where('name', 'like', '%' .$s. '%')
+            ->orWhere('username', 'like', '%' .$s. '%');
     }
 }
