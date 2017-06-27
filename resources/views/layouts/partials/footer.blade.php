@@ -5,7 +5,7 @@
       <div class="col-md-4 col-sm-6 footerleft ">
         <div class="logofooter"> BPS-yoU</div>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
-        <p><i class="fa fa-map-pin"></i> 210, Aggarwal Tower, Rohini sec 9, New Delhi -        110085, INDIA</p>
+        <p><i class="fa fa-map-pin"></i>Capitol Compound, City of Balanga, Bataan </p>
         <p><i class="fa fa-phone"></i> Phone (Philippines) : +91 9999 878 398</p>
         <p><i class="fa fa-envelope"></i> E-mail : info@bps-you.com</p>
         
