@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
-    use LikableTrait;
+    use LikableTrait, CommentableTrait;
 
 	protected $fillable = ['body', 'user_id'];
 
@@ -14,9 +14,6 @@ class Comment extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function comments(){
-        return $this->morphMany(Comment::class, 'commentable');
-    }
 	/*
 		get all the owning commentable model
 	*/	
