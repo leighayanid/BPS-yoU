@@ -16,11 +16,9 @@
 	</div>
 
 	<hr>
-
-	<div class="container">
 		<!-- todo change this to cards -->
-		@forelse($users as $user)
-			<div class="row">
+		<div class="row">
+			@forelse($users as $user)
 				<div class="col-md-1">
 					<img src="{{ Gravatar::src($user->email, 50) }}" class="img-circle">
 				</div>
@@ -28,12 +26,15 @@
 					<a href="{{route('user_profile', $user )}}"><h4>{{ $user->name }}</h4></a>
 					<h5>{{ $user->college }}</h5>
 				</div>
-			</div>
-			<hr>
 		@empty
-
+			<div>
+				<h4 class="text-center">
+					No user found. 
+				</h4>
+			</div>
 		@endforelse
 	</div>
+
 	
 	{{$users->links() }}
 @endsection
