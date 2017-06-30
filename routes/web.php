@@ -48,3 +48,7 @@ Route::post('/comment/like', 'LikeController@likeComment')->name('like');
 
 //route for vote
 Route::post('/thread/vote', 'VoteController@voteThread')->name('vote');
+
+//social authentication
+Route::get('socialauth/{provider}', 'Auth\SocialAuthController@redirectToProvider');
+Route::get('socialauth/{provider}/callback', 'Auth\SocialAuthController@handleProviderCallback');

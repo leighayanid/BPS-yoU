@@ -165,6 +165,8 @@ return [
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
         Cviebrock\EloquentSluggable\ServiceProvider::class,
         Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
+
         /*
          * Package Service Providers...
          */
@@ -228,6 +230,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Gravatar' => Thomaswelton\LaravelGravatar\Facades\Gravatar::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
     ],
 
