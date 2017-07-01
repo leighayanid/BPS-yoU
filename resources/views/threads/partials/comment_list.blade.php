@@ -15,8 +15,8 @@
 				<div class="comment-list">
 					<h5>{!! \Michelf\Markdown::defaultTransform(ucfirst(trans($comment->body))) !!}</h5>
 					<h6>replied by {{ $comment->user->name }}</h6>
-					<span class="fa fa-reply" onclick="toggleReply('{{ $comment->id }}')"></span>
-					<span class="fa fa-heart {{ $comment->isLiked()?'liked':''}}" onclick="likeComment('{{ $comment->id }}', this)"></span>
+					<span class="fa fa-reply toggleButton" onclick="toggleReply('{{ $comment->id }}')"></span>
+					<span class="fa fa-heart {{$comment->isLiked()?'liked':''}}" onclick="likeComment('{{ $comment->id }}', this)" style="cursor: pointer;"></span>
 					<span id="{{ $comment->id }}-count">{{ $comment->likes()->count() }}</span>
 					<!-- reply to comment -->
 				</div> <!-- end of comment list-->
@@ -65,6 +65,21 @@
               $(el).removeClass('liked');
               $('#'+id+"-count").text(votesCount-1);
             }
+          });
+        }
+
+      function markAsInappropriateThread(id, el){
+          var csrfToken = '{{ csrf_token() }}';
+          // var marksCount = parseInt($('#'+id+"-count").text());
+          $.post('{{route('mark')}}',{ threadId: id, _token: csrfToken}, function(data){
+            console.log(data);
+            // if(data.message==='marked'){
+            //   $(el).addClass('liked');
+            //   $('#'+id+"-count").text(votesCount+1);
+            // }else{
+            //   $(el).removeClass('marked');
+            //   $('#'+id+"-count").text(votesCount-1);
+            // }
           });
         }
 </script>

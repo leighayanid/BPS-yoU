@@ -6,11 +6,11 @@
 			<div class="col-md-1">
 				<div style="margin-top: 20%;">
 					<center>
-						<span class="text-center fa fa-caret-up fa-3x {{ $thread->isVoted()?'liked':''}}" onclick="voteThread('{{ $thread->id }}', this)"></span>
+						<span class="toggleButton text-center fa fa-caret-up fa-3x {{ $thread->isVoted()?'liked':''}}" onclick="voteThread('{{ $thread->id }}', this)"></span>
 					</center>	
 					<h4 class="text-center" id="{{ $thread->id }}-count">{{ $thread->votes()->count() }}</h4>
 					<center>
-						<span class="text-center fa fa-caret-down fa-3x {{ $thread->isVoted()?'':'liked'}}" onclick="voteThread('{{ $thread->id }}', this)"></span>
+						<span class="toggleButton text-center fa fa-caret-down fa-3x {{ $thread->isVoted()?'':'liked'}}" onclick="voteThread('{{ $thread->id }}', this)"></span>
 					</center>	
 				</div>
 			</div>
@@ -21,7 +21,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fa fa-caret-down fa-2x"></span>
             </a>
             <ul class="dropdown-menu" role="menu">
-                <li><a href="">	Mark as inappropriate</a></li>
+                <li class="toggleButton" onclick="markAsInappropriateThread('{{ $thread->id }}', this)"><a>	Mark as inappropriate</a></li>
                 <li><a href="">	Report this</a></li>
             </ul>
         	</li>

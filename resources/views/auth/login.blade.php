@@ -61,6 +61,11 @@
                             </div>
                         </div>
                     </form>
+                <div class="row">
+                    <hr>
+                    <p class="text-center">or login with </p>
+                    @include('layouts.partials.social_media_authentication')
+                </div>    
                 </div>
             </div>
         </div>

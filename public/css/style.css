@@ -3,7 +3,7 @@
 .action-buttons{ position: relative; }
 .action-buttons a, form, button{ display: inline; }
 .liked { color:red; }
-
+.toggleButton{ cursor: pointer; }
 /*footer*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
 footer { background-color:#0c1a1e; min-height:350px; }

@@ -12,7 +12,7 @@
 			</div>
 			<div class="form-group">
 				<label for="">College</label>
-				<select name="college" id="college" class="form-control" required="required" placeholder="Select your preffered college">
+				<select name="college" id="college" class="form-control" required="required">
 					@foreach($colleges as $college)
 						<option value="{{ $college }}">{{ $college }}</option>
 					@endforeach
