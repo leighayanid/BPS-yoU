@@ -50,7 +50,7 @@ Route::post('/comment/like', 'LikeController@likeComment')->name('like');
 Route::post('/thread/vote', 'VoteController@voteThread')->name('vote');
 
 //route for marking thread as inappropriate
-Route::post('/thread/mark', 'MarkThreadController@voteThread')->name('mark');
+Route::post('/thread/mark', 'MarkThreadController@markAsInappropriateThread')->name('mark');
 
 //social authentication
 Route::get('socialauth/{provider}', 'Auth\SocialAuthController@redirectToProvider');

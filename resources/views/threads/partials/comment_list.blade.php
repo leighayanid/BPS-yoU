@@ -70,7 +70,7 @@
 
       function markAsInappropriateThread(id, el){
           var csrfToken = '{{ csrf_token() }}';
-          var marksCount = parseInt($('#'+id+"-count").text());
+          // var marksCount = parseInt($('#'+id+"-count").text());
           $.post('{{route('mark')}}',{ threadId: id, _token: csrfToken}, function(data){
             console.log(data);
             // if(data.message==='marked'){
