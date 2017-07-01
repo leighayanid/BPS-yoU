@@ -8,7 +8,7 @@ use Cviebrock\EloquentSluggable\Sluggable;
 class Thread extends Model
 {	
 
-	use CommentableTrait, VotableTrait;
+	use CommentableTrait, VotableTrait, MarkableTrait;
 	use Sluggable;
 	
 	protected $fillable=['subject', 'type', 'thread', 'user_id'];
