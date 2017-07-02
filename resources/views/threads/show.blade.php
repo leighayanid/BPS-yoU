@@ -21,7 +21,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fa fa-caret-down fa-2x"></span>
             </a>
             <ul class="dropdown-menu" role="menu">
-                <li class="toggleButton" onclick="markAsInappropriateThread('{{ $thread->id }}', this)"><a>	Mark as inappropriate</a></li>
+                <li class="toggleButton" onclick="markAsInappropriateThread('{{ $thread->id }}', this)"><a>{{ $thread->isMarked()? 'Unmark as inappropriate' : 'Mark as inappropriate'}}</a></li>
                 <li><a href="">	Report this</a></li>
             </ul>
         	</li>
