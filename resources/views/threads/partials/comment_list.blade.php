@@ -73,13 +73,11 @@
           // var marksCount = parseInt($('#'+id+"-count").text());
           $.post('{{route('mark')}}',{ threadId: id, _token: csrfToken}, function(data){
             console.log(data);
-            // if(data.message==='marked'){
-            //   $(el).addClass('liked');
-            //   $('#'+id+"-count").text(votesCount+1);
-            // }else{
-            //   $(el).removeClass('marked');
-            //   $('#'+id+"-count").text(votesCount-1);
-            // }
+            if(data.message==='marked'){
+              $(el).text('Unmark as inappropriate');
+            }else{
+              $(el).text('Mark as inappropriate');
+            }
           });
         }
 </script>
