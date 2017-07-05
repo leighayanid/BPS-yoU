@@ -8,7 +8,7 @@
 					<center>
 						<span class="toggleButton text-center fa fa-caret-up fa-3x {{ $thread->isVoted()?'liked':''}}" onclick="voteThread('{{ $thread->id }}', this)"></span>
 					</center>	
-					<h4 class="text-center" id="{{ $thread->id }}-count">{{ $thread->votes()->count() }}</h4>
+					<a data-toggle="modal" id="{{ $thread->id }}-count" href="#users"><h4 class="text-center">{{ $thread->votes()->count() }}</h4></a>
 					<center>
 						<span class="toggleButton text-center fa fa-caret-down fa-3x {{ $thread->isVoted()?'':'liked'}}" onclick="voteThread('{{ $thread->id }}', this)"></span>
 					</center>	
@@ -40,12 +40,15 @@
 								<button type="submit" class="btn btn-danger delete-button">Delete</button>
 							</form>
 						</div>
+						<br>
 					@endif
 					<br>
 			</div>
 		
 		@include('threads.partials.create_comment')
 		@include('threads.partials.comment_list')
+		@include('threads.partials.modal')
+		
 
 
 </div>

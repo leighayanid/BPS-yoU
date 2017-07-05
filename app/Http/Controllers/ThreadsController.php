@@ -96,4 +96,5 @@ class ThreadsController extends Controller
         $thread->delete();
         return redirect('threads');
     }
+
 }
