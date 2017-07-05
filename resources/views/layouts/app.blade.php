@@ -40,5 +40,7 @@
 
 	<!-- Scripts -->
 	<script src="{{ asset('js/app.js') }}"></script>
+	<script src="{{ asset('js/masonry.pkgd.min.js') }}"></script>
+	<script src="{{ asset('js/custom-masonry.js') }}"></script>
 </body>
 </html>

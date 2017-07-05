@@ -8,7 +8,7 @@
 					<center>
 						<span class="toggleButton text-center fa fa-caret-up fa-3x {{ $thread->isVoted()?'liked':''}}" onclick="voteThread('{{ $thread->id }}', this)"></span>
 					</center>	
-					<h4 class="text-center" id="{{ $thread->id }}-count">{{ $thread->votes()->count() }}</h4>
+					<a data-toggle="modal" id="{{ $thread->id }}-count" href="#vote_modal"><h4 class="text-center">{{ $thread->votes()->count() }}</h4></a>
 					<center>
 						<span class="toggleButton text-center fa fa-caret-down fa-3x {{ $thread->isVoted()?'':'liked'}}" onclick="voteThread('{{ $thread->id }}', this)"></span>
 					</center>	
@@ -21,7 +21,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fa fa-caret-down fa-2x"></span>
             </a>
             <ul class="dropdown-menu" role="menu">
-                <li class="toggleButton" onclick="markAsInappropriateThread('{{ $thread->id }}', this)"><a>{{ $thread->isMarked()? 'Unmark as inappropriate' : 'Mark as inappropriate'}}</a></li>
+                <li class="toggleButton"><a onclick="markAsInappropriateThread('{{ $thread->id }}', this)">{{ $thread->isMarked()? 'Unmark as inappropriate' : 'Mark as inappropriate'}}</a></li>
                 <li><a href="">	Report this</a></li>
             </ul>
         	</li>
@@ -40,13 +40,16 @@
 								<button type="submit" class="btn btn-danger delete-button">Delete</button>
 							</form>
 						</div>
+						<br>
 					@endif
 					<br>
 			</div>
 		
 		@include('threads.partials.create_comment')
 		@include('threads.partials.comment_list')
-
+		<!-- modals for displaying users who voted/liked/replied to thread  -->
+		@include('threads.partials.vote_modal')
+		@include('threads.partials.comment_modal')
 
 </div>
 

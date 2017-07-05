@@ -17,23 +17,28 @@
 
 	<hr>
 		<!-- todo change this to cards -->
-		<div class="row">
+		<div class="grid">
 			@forelse($users as $user)
-				<div class="col-md-1">
-					<img src="{{ Gravatar::src($user->email, 50) }}" class="img-circle">
+			<div class="grid-item">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<center><img src="{{ Gravatar::src($user->email, 50) }}" class="img-circle"></center>
+					</div>
+					<div class="panel-body">
+						<a href="{{route('user_profile', $user )}}"><h4>{{ $user->name }}</h4></a>
+						<h5>{{ $user->college }}</h5>
+					</div>
 				</div>
-				<div class="col-md-11">
-					<a href="{{route('user_profile', $user )}}"><h4>{{ $user->name }}</h4></a>
-					<h5>{{ $user->college }}</h5>
-				</div>
-		@empty
-			<div>
-				<h4 class="text-center">
-					No user found. 
-				</h4>
 			</div>
-		@endforelse
-	</div>
+			@empty
+				<div>
+					<h4 class="text-center">
+						No user found. 
+					</h4>
+				</div>
+			@endforelse
+		</div>	
+
 
 	
 	{{$users->links() }}
