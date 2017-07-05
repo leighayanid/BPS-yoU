@@ -6,6 +6,6 @@
 		<h6>replied by {{ $reply->user->name }}</h6>
 	<span class="fa fa-reply toggleButton" onclick="toggleReply('{{ $comment->id }}')"></span>
 	<span class="fa fa-heart {{ $reply->isLiked()?'liked':''}} toggleButton" onclick="likeComment('{{ $reply->id }}', this)"></span>
-	<span id="{{ $reply->id }}-count">{{ $reply->likes()->count() }}</span>
+	<span class="toggleButton" id="{{ $reply->id }}-count">{{ $reply->likes()->count() }}</span>
 	@endforeach
 </div> <!-- end of reply list-->
