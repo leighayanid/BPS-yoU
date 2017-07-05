@@ -6,8 +6,8 @@
 				<h4 class="modal-title">People who upvoted this thread</h4>
 			</div>
 			<div class="modal-body">
-				@forelse($thread->votes as $user)
-					<h4>{{ $user }}</h4>
+				@forelse($thread->votes as $vote)
+					<h4>{{ $vote->user->name }}</h4>
 				@empty
 					<h4>No people upvoted this yet.</h4>
 				@endforelse
