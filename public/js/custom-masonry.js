@@ -3,5 +3,5 @@ $('.grid').masonry({
   itemSelector: '.grid-item',
   // use element for option
  	columnWidth: 100,
- 	gutter: 10,
+ 	gutter: 5,
 });
