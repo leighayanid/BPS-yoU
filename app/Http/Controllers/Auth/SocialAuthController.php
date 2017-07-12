@@ -28,8 +28,17 @@ class SocialAuthController extends Controller
     	//get the user
       $user = Socialite::driver($provider)->user();
       //store user info
-      dd($user);
-      // $user->token;
+      $authUser = User::firstOrNew(['provider_id' => $user_id]);
+      $authUser->name = $user->name;
+      $authUser->email = $user->email;
+      $authUser->provider = $provider;
+      $authUser->save();
+      
+
+      auth()->login($authUser);
+      
+      return redirect('/');
+      
     }
 
 }
