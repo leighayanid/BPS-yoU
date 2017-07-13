@@ -16,8 +16,8 @@ class AddProvidersToUserAuth extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->string('provider');
             $table->string('provider_id');
-            $table->string('email')->unique()->nullable();
-            $table->string('password')->nullable();
+            $table->string('email')->nullable()->change();
+            $table->string('password')->nullable()->change();
         });
     }
 
