@@ -9,6 +9,7 @@
         "anhskohbo/no-captcha": "^2.3",
         "cviebrock/eloquent-sluggable": "^4.2",
         "doctrine/dbal": "^2.5",
+        "laravel/dusk": "^1.1",
         "laravel/framework": "5.4.*",
         "laravel/socialite": "^3.0",
         "laravel/tinker": "~1.0",
