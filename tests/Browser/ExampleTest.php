@@ -19,7 +19,13 @@ class HomePageTest extends DuskTestCase
             $browser->visit('/')
                     ->assertSee('BPS-yoU')
                     ->clickLink('Login')
-                    ->clickLink('Register');
+                    ->clickLink('Register')
+                    ->visit('/')
+                    ->clickLink('Create your account now.')
+                    ->visit('/')
+                    ->clickLink('Sign in with email')
+                    ->visit('/')
+                    ->clickLink('Explore');
         });
     }
 }
