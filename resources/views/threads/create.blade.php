@@ -14,7 +14,7 @@
 				<label for="">College</label>
 				<select name="college" id="college" class="form-control" required="required">
 					@foreach($colleges as $college)
-						<option value="{{ $college }}">{{ $college }}</option>
+						<option value="{{ $college->college_acronym }}">{{ $college->college_name }}</option>
 					@endforeach
 				</select>
 			</div>
