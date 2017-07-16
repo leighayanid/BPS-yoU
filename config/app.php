@@ -166,7 +166,6 @@ return [
         Cviebrock\EloquentSluggable\ServiceProvider::class,
         Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
-
         /*
          * Package Service Providers...
          */
@@ -231,7 +230,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Gravatar' => Thomaswelton\LaravelGravatar\Facades\Gravatar::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
-
+     
     ],
 
 ];
