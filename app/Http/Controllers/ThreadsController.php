@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Thread;
 use App\Http\Requests\ThreadRequest;
+use App\College;
 
 class ThreadsController extends Controller
 {
@@ -32,7 +33,7 @@ class ThreadsController extends Controller
      */
     public function create()
     {
-       $colleges = ['In General','College of Information and Communication Technology', 'College of Engineering and Architecture', 'College of Nursing and Midwifery', 'College of Industrial Technology', 'College of Business Administration','College of Technical Vocational Technology', 'College of Education', 'College of Agriculture'];
+       $colleges = College::all();
        return view('threads.create', compact('colleges'));
     }
 

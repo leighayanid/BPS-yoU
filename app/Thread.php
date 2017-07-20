@@ -11,7 +11,7 @@ class Thread extends Model
 	use CommentableTrait, VotableTrait, MarkableTrait;
 	use Sluggable;
 	
-	protected $fillable=['subject', 'type', 'thread', 'user_id'];
+	protected $fillable=['subject', 'type', 'thread', 'college', 'user_id'];
 
 	// creates relationship to user
 	public function user(){

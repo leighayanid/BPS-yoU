@@ -13,9 +13,15 @@
 			<div class="form-group">
 				<label for="">College</label>
 				<select name="college" id="college" class="form-control" required="required">
-					@foreach($colleges as $college)
-						<option value="{{ $college }}">{{ $college }}</option>
-					@endforeach
+					<option value="CICT">College of Information and Communication Technology</option>
+					<option value="CIT">College of Industrial Technology</option>
+					<option value="CICT">College of Technical and Vocational Technology</option>
+					<option value="CEA">College of Engineering and Architecture</option>
+					<option value="CBA">College of Business and Accountancy</option>
+					<option value="COE">College of Education</option>
+					<option value="COA">College of Agriculture</option>
+					<option value="CAS">College of Arts and Sciences</option>
+					<option value="CBBS">College of Behavioral and Behavioral Sciences</option>
 				</select>
 			</div>
 			<div class="form-group">
