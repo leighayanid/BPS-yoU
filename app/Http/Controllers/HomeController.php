@@ -3,8 +3,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Thread;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -25,6 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return redirect('threads');
+        $threads = Thread::all()->latest()->get();
+        return view('threads', compact('threads'));
     }
 }
