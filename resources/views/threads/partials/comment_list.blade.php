@@ -1,5 +1,5 @@
 <div class="comments">	
-	<h4>There are {{ $thread->comments->count() }} comments found on this thread.</h4>
+	<h4>{{ $thread->comments->count() }} {{ str_plural('comment', $thread->comments->count()) }} found on this thread.</h4>
 		<hr>
 		@forelse($thread->comments as $comment)
 			<div class="well">
