@@ -13,12 +13,13 @@ class RegisterTest extends DuskTestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testRegisterPage()
     {
+        dump('testRegisterPage');
         $this->browse(function (Browser $browser) {
             $browser->visit('/register')
                     ->assertSee('Register')
-                    ->assertSee('Name')
+                    ->assertSee('Complete Name')
                     ->assertSee('Username')
                     ->assertSee('E-Mail Address')
                     ->assertSee('Password')

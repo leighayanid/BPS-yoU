@@ -13,14 +13,15 @@ class LoginTest extends DuskTestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testLoginPage()
     {
+        dump('testLoginPage');
         $this->browse(function (Browser $browser) {
             $browser->visit('/login')
                     ->assertSee('Login')
-                    ->assertSee('E-Mail Address')
-                    ->assertSee('Password')
-                    ->assertSee('Forgot Your Password?')
+                    ->assertSee('#email')
+                    ->assertSee('#password')
+                    ->assertSee('#remember')
                     ->assertSee('Remember Me')
                     ->value('#email', 'leighdinaya04@gmail.com')
                     ->value('#password', 'leighleigh')

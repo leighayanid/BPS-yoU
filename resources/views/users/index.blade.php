@@ -25,8 +25,8 @@
 						<center><img src="{{ Gravatar::src($user->email, 50) }}" class="img-circle"></center>
 					</div>
 					<div class="panel-body">
-						<a href="{{route('user_profile', $user )}}"><h4>{{ $user->name }}</h4></a>
-						<h5>{{ $user->college }}</h5>
+						<a href="{{route('user_profile', $user )}}"><h4 class="text-center">{{ $user->name }}</h4></a>
+						<h5 class="text-center">{{ $user->college }}</h5>
 					</div>
 				</div>
 			</div>

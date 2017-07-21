@@ -13,8 +13,9 @@ class HomePageTest extends DuskTestCase
      *
      * @return void
      */
-    public function testBasicExample()
+    public function testHomePage()
     {
+        dump('testHomePage');
         $this->browse(function (Browser $browser) {
             $browser->visit('/')
                     ->assertSee('BPS-yoU')
