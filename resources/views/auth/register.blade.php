@@ -11,10 +11,8 @@
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Name</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                            <div class="col-md-6 col-md-offset-3">
+                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Complete Name" required autofocus>
 
                                 @if ($errors->has('name'))
                                     <span class="help-block">
@@ -25,10 +23,8 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
-                            <label for="username" class="col-md-4 control-label">Username</label>
-
-                            <div class="col-md-6">
-                                <input id="username" type="text" class="form-control" name="username" value="{{ old('username') }}" required autofocus>
+                            <div class="col-md-6 col-md-offset-3">
+                                <input id="username" type="text" class="form-control" name="username" value="{{ old('username') }}" placeholder="Username" required autofocus>
 
                                 @if ($errors->has('username'))
                                     <span class="help-block">
@@ -39,10 +35,8 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                            <div class="col-md-6 col-md-offset-3">
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email Address" required>
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -53,9 +47,7 @@
                         </div>
 
                          <div class="form-group{{ $errors->has('campus') ? ' has-error' : '' }}">
-                            <label for="campus" class="col-md-4 control-label">Campus</label>
-
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-md-offset-3">
                                <select name="campus" id="campus" class="form-control" required="required">
                                     <option value="Main">Main</option>
                                     <option value="Balanga">Balanga</option>
@@ -74,10 +66,7 @@
 
                        
                         <div class="form-group{{ $errors->has('college') ? ' has-error' : '' }}">
-                            <label for="college" class="col-md-4 control-label">College</label>
-
-                            <div class="col-md-6">
-
+                            <div class="col-md-6 col-md-offset-3">
                                 <select name="college" id="college" class="form-control" required="required">
                                     <option value="CICT">College of Information and Communication Technology</option>
                                     <option value="CIT">College of Industrial Technology</option>
@@ -98,9 +87,7 @@
                         </div>
 
                          <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
-                            <label for="status" class="col-md-4 control-label">School Status</label>
-
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-md-offset-3">
                                 <select name="status" id="status" class="form-control" required="required">
                                     <option value="Student">Student</option>
                                     <option value="Alumnus">Alumnus</option>
@@ -115,10 +102,8 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+                            <div class="col-md-6 col-md-offset-3">
+                                <input id="password" type="password" class="form-control" name="password" placeholder="Password" required>
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -129,15 +114,13 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            <div class="col-md-6 col-md-offset-3">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password" required>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
+                            <div class="col-md-6 col-md-offset-3">
                                 <button type="submit" class="btn btn-block btn-primary">
                                     Register
                                 </button>
