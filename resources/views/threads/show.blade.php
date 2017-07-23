@@ -18,7 +18,7 @@
 			<div class="col-md-10">
 				<div class="pull-right">
 					<li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fa fa-caret-down fa-2x"></span>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fa fa-ellipsis-h fa-2x"></span>
             </a>
             <ul class="dropdown-menu" role="menu">
                 <li class="toggleButton"><a onclick="markAsInappropriateThread('{{ $thread->id }}', this)">{{ $thread->isMarked()? 'Unmark as inappropriate' : 'Mark as inappropriate'}}</a></li>
