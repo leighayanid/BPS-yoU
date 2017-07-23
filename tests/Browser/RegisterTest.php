@@ -19,10 +19,6 @@ class RegisterTest extends DuskTestCase
         $this->browse(function (Browser $browser) {
             $browser->visit('/register')
                     ->assertSee('Register')
-                    ->assertSee('Complete Name')
-                    ->assertSee('Username')
-                    ->assertSee('E-Mail Address')
-                    ->assertSee('Password')
                     ->value('#name', 'Leigh Dinaya')
                     ->value('#username', 'leighayanid')
                     ->value('#email', 'leighdinaya04@gmail.com')

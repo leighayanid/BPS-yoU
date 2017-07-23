@@ -21,7 +21,6 @@ Route::get('/', function (Request $request) {
 
 Auth::routes();
 
-
 // //resource route for all users
 Route::resource('peninsulares', 'UsersController');
 Route::get('{user}/edit', 'UsersController@edit')->name('edit-user');
