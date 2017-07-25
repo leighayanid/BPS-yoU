@@ -49,7 +49,7 @@
                          <div class="form-group{{ $errors->has('campus') ? ' has-error' : '' }}">
                             <div class="col-md-6 col-md-offset-3">
                                <select name="campus" id="campus" class="form-control" required="required">
-                                <option value="" selected>Select your campus</option>
+                                    <option value="" selected>Select your campus</option>
                                     <option value="Main">Main</option>
                                     <option value="Balanga">Balanga</option>
                                     <option value="Abucay">Abucay</option>
