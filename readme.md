@@ -1,9 +1,9 @@
-<h2>BPS-yoU</h2>
+## BPS-yoU
 <hr>
 
 BPS-yoU is a forum web application developed for the students and alumni of Bataan Peninsula State University similar to web-based forum application like StackOverflow and PinoyExchange. I believe every student or alumnus of this institution must voice their opinion about certain topics or issues that are happening within the school.
 
-<h3>Features of the project are the following:</h3>
+## Features of the project are the following:
 - Basic Authentication
 - Social Media Authentication using Facebook, Twitter, Github or Google
 - Create, read, update, delete a thread
@@ -12,7 +12,7 @@ BPS-yoU is a forum web application developed for the students and alumni of Bata
 - Upvote/downvote a thread
 - Like/Unlike feature
 
-<h3>Technology Stack</h3>
+## Technology Stack
 - HTML5, CSS, jQuery
 - Laravel
 - Laravel Socialite
