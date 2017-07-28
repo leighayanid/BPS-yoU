@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Thread;
 use App\Http\Requests\ThreadRequest;
 use App\College;
+use App\Vote;
+use App\Comment;
+use App\Like;
 
 class ThreadsController extends Controller
 {
@@ -95,6 +98,19 @@ class ThreadsController extends Controller
     public function destroy(Thread $thread)
     {
         $thread->delete();
+        // find comments in the thread.
+        $comments = Comment::where('commentable_id',$thread->id);
+        // delete the comments
+        $comments->delete();
+        // find upvotes in the thread
+        $votes = Vote::where('votable_id', $thread->id);
+        // delete the upvotes
+        $votes->delete();
+        /*
+            TODO
+            // find likes for the thread's comment
+            //delete the likes for the thread's comment
+        */ 
         return redirect('threads');
     }
 
