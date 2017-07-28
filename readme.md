@@ -16,6 +16,8 @@ BPS-yoU is a forum web application developed for the students and alumni of Bata
 - HTML5, CSS, jQuery
 - Laravel
 - Laravel Socialite
+- MySQL
+- Laragon
 
 ## Contributing
 
