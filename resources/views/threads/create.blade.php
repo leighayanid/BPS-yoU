@@ -13,6 +13,7 @@
 			<div class="form-group">
 				<label for="">College</label>
 				<select name="college" id="college" class="form-control" required="required">
+					<option value="" selected>Select your college</option>
 					<option value="CICT">College of Information and Communication Technology</option>
 					<option value="CIT">College of Industrial Technology</option>
 					<option value="CICT">College of Technical and Vocational Technology</option>

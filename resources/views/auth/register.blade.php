@@ -49,6 +49,7 @@
                          <div class="form-group{{ $errors->has('campus') ? ' has-error' : '' }}">
                             <div class="col-md-6 col-md-offset-3">
                                <select name="campus" id="campus" class="form-control" required="required">
+                                    <option value="" selected>Select your campus</option>
                                     <option value="Main">Main</option>
                                     <option value="Balanga">Balanga</option>
                                     <option value="Abucay">Abucay</option>
@@ -68,6 +69,7 @@
                         <div class="form-group{{ $errors->has('college') ? ' has-error' : '' }}">
                             <div class="col-md-6 col-md-offset-3">
                                 <select name="college" id="college" class="form-control" required="required">
+                                    <option value="" selected>Select your designated college department</option>
                                     <option value="CICT">College of Information and Communication Technology</option>
                                     <option value="CIT">College of Industrial Technology</option>
                                     <option value="CICT">College of Technical and Vocational Technology</option>
@@ -89,6 +91,7 @@
                          <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
                             <div class="col-md-6 col-md-offset-3">
                                 <select name="status" id="status" class="form-control" required="required">
+                                    <option value="" selected>School status</option>
                                     <option value="Student">Student</option>
                                     <option value="Alumnus">Alumnus</option>
                                 </select>

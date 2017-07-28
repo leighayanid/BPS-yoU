@@ -19,14 +19,26 @@ class LoginTest extends DuskTestCase
         $this->browse(function (Browser $browser) {
             $browser->visit('/login')
                     ->assertSee('Login')
-                    ->assertSee('#email')
-                    ->assertSee('#password')
-                    ->assertSee('#remember')
-                    ->assertSee('Remember Me')
-                    ->value('#email', 'leighdinaya04@gmail.com')
-                    ->value('#password', 'leighleigh')
-                    ->click('button[type="submit"]')
-                    ->assertPathIs('/threads');
+                    ->type('email', 'leighdinaya04@gmail.com')
+                    ->type('password', 'leighleigh')
+                    ->press('Login')
+                    ->pause(3000)
+                    ->assertPathIs('/');
+        });
+
+        $this->logout();
+    }
+
+    /*
+        logout user
+    */
+     public function logout(){
+        dump('logout');
+        $this->browse(function (Browser $browser){
+            $browser->visit('/threads')
+                ->click('#menu')
+                ->click('#logout')
+                ->pause(2000);
         });
     }
 }
