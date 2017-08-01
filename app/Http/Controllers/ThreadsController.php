@@ -99,7 +99,7 @@ class ThreadsController extends Controller
     {
         $thread->delete();
         // find comments in the thread.
-        $comments = Comment::where('commentable_id',$thread->id);
+        $comments = Comment::where('commentable_id', $thread->id);
         // delete the comments
         $comments->delete();
         // find upvotes in the thread
