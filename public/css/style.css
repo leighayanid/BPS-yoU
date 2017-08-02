@@ -44,3 +44,5 @@ footer { background-color:#0c1a1e; min-height:350px; }
  /*masonry*/
  .grid-item { float:left;width:200px; }
 .grid-item .panel { height: 200px; }
+
+/* custom style for thread list */
