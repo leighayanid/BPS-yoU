@@ -46,3 +46,31 @@ footer { background-color:#0c1a1e; min-height:350px; }
 .grid-item .panel { height: 200px; }
 
 /* custom style for thread list */
+.threads > .list-group-item{
+	margin: 10px 0px;
+	border-radius: none;
+	background: white;
+	border-color: #C50C0C;
+}
+
+.threads > .list-group-item >.list-group-item-heading{
+	color: #3D2727;
+	font-size: 20px;
+	font-style: bold;
+}
+.threads > .list-group-item >.list-group-item-text{
+	color: #3D2727;
+	font-size: 15px;
+}
+.threads > .list-group-item > .badge{
+	font-size: 15px;
+}
+
+/* custom style for navbar */
+.navbar{
+	background: #C50C0C;
+}
+
+a{
+	color: #C50C0C;
+}
