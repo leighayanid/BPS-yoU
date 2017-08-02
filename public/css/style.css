@@ -46,31 +46,26 @@ footer { background-color:#0c1a1e; min-height:350px; }
 .grid-item .panel { height: 200px; }
 
 /* custom style for thread list */
-.threads > .list-group-item{
-	margin: 10px 0px;
-	border-radius: none;
-	background: white;
-	border-color: #C50C0C;
+.threads > .list-group-item{ 
+	margin: 10px 0px; border: 1px solid #4D4D4D;
+ 	border-radius: 5px; background: #FFFFFF;
 }
-
 .threads > .list-group-item >.list-group-item-heading{
-	color: #3D2727;
+	color: #920000;
 	font-size: 20px;
 	font-style: bold;
+	padding-bottom: 8px;
 }
-.threads > .list-group-item >.list-group-item-text{
-	color: #3D2727;
-	font-size: 15px;
-}
-.threads > .list-group-item > .badge{
-	font-size: 15px;
-}
+.threads > .list-group-item >.list-group-item-text{ color: #3D2727; font-size: 15px; }
+.threads > .list-group-item > .badge{ font-size: 15px; background-color: #C50C0C; color: white; }
+.threads > .list-group-item:hover{ background-color: #C50C0C; border-color: #C50C0C; }
 
 /* custom style for navbar */
-.navbar{
-	background: #C50C0C;
-}
+.navbar{ background: #C50C0C; }
 
-a{
-	color: #C50C0C;
-}
+/* custom style for links */
+a{ color: #C50C0C; }
+
+/* custom style for buttons */
+.btn-primary{ background-color: #C50C0C; border: none; }
+.btn-primary:hover{ background-color: #B70101; }
