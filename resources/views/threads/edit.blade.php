@@ -11,8 +11,19 @@
 				<input type="text" class="form-control" name="subject" id="" placeholder="Input subject" value="{{ $thread->subject }}">
 			</div>
 			<div class="form-group">
-				<label for="">Type</label>
-				<input type="text" class="form-control" name="type" id="" placeholder="Input type" value="{{ $thread->type }}">
+				<label for="">College</label>
+				<select name="college" id="college" class="form-control" required="required">
+					<option value="" selected> {{ $thread->college }}</option>
+					<option value="CICT">CICT</option>
+					<option value="CIT">CIT</option>
+					<option value="CTVT">CTVT</option>
+					<option value="CEA">CEA</option>
+					<option value="CBA">CBA</option>
+					<option value="COE">COE</option>
+					<option value="COA">COA</option>
+					<option value="CAS">CAS</option>
+					<option value="CBBS">CBBS</option>
+				</select>
 			</div>
 			<div class="form-group">
 				<label for="">Thread</label>

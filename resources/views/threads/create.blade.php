@@ -14,15 +14,15 @@
 				<label for="">College</label>
 				<select name="college" id="college" class="form-control" required="required">
 					<option value="" selected>Select your college</option>
-					<option value="CICT">College of Information and Communication Technology</option>
-					<option value="CIT">College of Industrial Technology</option>
-					<option value="CICT">College of Technical and Vocational Technology</option>
-					<option value="CEA">College of Engineering and Architecture</option>
-					<option value="CBA">College of Business and Accountancy</option>
-					<option value="COE">College of Education</option>
-					<option value="COA">College of Agriculture</option>
-					<option value="CAS">College of Arts and Sciences</option>
-					<option value="CBBS">College of Behavioral and Behavioral Sciences</option>
+					<option value="CICT">CICT</option>
+					<option value="CIT">CIT</option>
+					<option value="CTVT">CTVT</option>
+					<option value="CEA">CEA</option>
+					<option value="CBA">CBA</option>
+					<option value="COE">COE</option>
+					<option value="COA">COA</option>
+					<option value="CAS">CAS</option>
+					<option value="CBBS">CBBS</option>
 				</select>
 			</div>
 			<div class="form-group">
