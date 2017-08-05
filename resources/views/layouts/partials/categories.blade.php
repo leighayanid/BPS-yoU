@@ -1,6 +1,7 @@
 <ul class="list-group">
 	<li class="list-group-item">
 		<a href="{{ route('threads.index')}}">General Threads</a>
+		<span class="fa fa-info-circle"></span>
 	</li>
 	<li class="list-group-item">
 		<a href="">College of Information and Communication Technology</a>

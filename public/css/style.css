@@ -47,8 +47,9 @@ footer { background-color:#0c1a1e; min-height:350px; }
 
 /* custom style for thread list */
 .threads > .list-group-item{ 
-	margin: 10px 0px; border: 1px solid #4D4D4D;
+	margin-bottom: 20px; 
  	border-radius: 5px; background: #FFFFFF;
+ 	box-shadow: -1px -1px 15px 0px rgba(0,0,0,0.17);
 }
 .threads > .list-group-item >.list-group-item-heading{
 	color: #920000;
@@ -69,3 +70,8 @@ a{ color: #C50C0C; }
 /* custom style for buttons */
 .btn-primary{ background-color: #C50C0C; border: none; }
 .btn-primary:hover{ background-color: #B70101; }
+
+/* custom style for font-awesome */
+.icons:hover{
+	box-shadow: 0px 8px 15px 0px rgba(90, 91, 95, 0.33);
+}

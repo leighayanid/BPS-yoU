@@ -43,6 +43,7 @@
 						<br>
 					@endif
 					<br>
+				<hr>
 			</div>
 		
 		@include('threads.partials.create_comment')
