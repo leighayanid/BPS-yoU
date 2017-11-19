@@ -8,7 +8,7 @@
 				<div class="container">
 					<h1 class="text-center">403</h1>
 					<center>
-						<p>You are not authorized to edit this thread.</p>
+						<p>You are not authorized here. Go home.</p>
 						<p>
 							<a class="btn btn-primary btn-lg" href="/">Return to home</a>
 						</p>
