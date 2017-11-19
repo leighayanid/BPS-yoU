@@ -19,7 +19,7 @@ class UsersController extends Controller
     public function index(Request $request)
     {
         $s = $request->input('search');
-        $users = User::latest()->search($s)->paginate(30);
+        $users = User::latest()->search($s)->paginate(32);
         return view('users.index', compact('users', 's'));
     }
 
