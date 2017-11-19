@@ -73,6 +73,7 @@ class ThreadsController extends Controller
      */
     public function edit(Thread $thread)
     {
+        $this->authorize('update', $thread);
         return view('threads.edit')->with('thread', $thread);
     }
 
@@ -85,6 +86,7 @@ class ThreadsController extends Controller
      */
     public function update(ThreadRequest $request, Thread $thread)
     {
+       $this->authorize('update', $thread); 
        $thread->update($request->all());
        return redirect()->route('threads.show', $thread->id)->withMessage("Thread updated.");
     }
@@ -97,13 +99,21 @@ class ThreadsController extends Controller
      */
     public function destroy(Thread $thread)
     {
+        //check if user is authorized to delete the thread first
+        $this->authorize('delete', $thread);
+
+        //delete thread
         $thread->delete();
+
         // find comments in the thread.
         $comments = Comment::where('commentable_id', $thread->id);
+
         // delete the comments
         $comments->delete();
+
         // find upvotes in the thread
         $votes = Vote::where('votable_id', $thread->id);
+        
         // delete the upvotes
         $votes->delete();
         /*
