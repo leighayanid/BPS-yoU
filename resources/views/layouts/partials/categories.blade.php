@@ -16,18 +16,15 @@
 		<a href="">College of Arts and Sciences</a>
 	</li>
 	<li class="list-group-item">
-
 		<a href="">College of Industrial Technology</a>
 	</li>
 	<li class="list-group-item">
 		<a href="">College of Technical Vocational</a>
 	</li>
 	<li class="list-group-item">
-
 		<a href="">College of Business Administration</a>
 	</li>
 	<li class="list-group-item">
-
 		<a href="">College of Education</a>
 	</li>
 </ul>
