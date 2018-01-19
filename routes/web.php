@@ -23,6 +23,7 @@ Auth::routes();
 
 // //resource route for all users
 Route::resource('peninsulares', 'UsersController');
+
 Route::get('{user}/edit', 'UsersController@edit')->name('edit-user');
 
 // // resource route for threads

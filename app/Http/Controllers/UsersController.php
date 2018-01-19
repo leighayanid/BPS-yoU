@@ -31,7 +31,7 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        $this->authorize('update');
+        // $this->authorize('update', $user);
         $user = User::findOrFail($id);
         return view('users.edit', compact('user'));   
     }

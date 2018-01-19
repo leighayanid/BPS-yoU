@@ -3,7 +3,6 @@
 namespace App\Policies;
 
 use App\User;
-use App\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class UserPolicy
@@ -17,9 +16,10 @@ class UserPolicy
      * @param  \App\User  $user
      * @return mixed
      */
-    public function view(User $user, User $user)
+    public function view(User $user)
     {
         //
+ 
     }
 
     /**
@@ -43,7 +43,7 @@ class UserPolicy
     public function update(User $user)
    { 
         //
-       
+       return $user->id === $user->id;
     }
 
     /**
