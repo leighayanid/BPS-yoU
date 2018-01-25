@@ -13,7 +13,7 @@
 			<div class="form-group">
 				<label for="">College</label>
 				<select name="college" id="college" class="form-control" required="required">
-					<option value="" selected> {{ $thread->college }}</option>
+					<option value="" selected> {{ $thread->college }} </option>
 					<option value="CICT">CICT</option>
 					<option value="CIT">CIT</option>
 					<option value="CTVT">CTVT</option>

@@ -57,7 +57,7 @@
                             
                             <div class="col-md-6">
                                <select name="campus" id="campus" class="form-control">
-                                    <option value="" selected>Select your campus</option>
+                                    <option value="" selected>{{ $user->campus }}</option>
                                     <option value="Main">Main</option>
                                     <option value="Balanga">Balanga</option>
                                     <option value="Abucay">Abucay</option>
@@ -78,7 +78,7 @@
                             <label for="college" class="col-md-4 control-label">College</label> 
                             <div class="col-md-6">
                                 <select name="college" id="college" class="form-control">
-                                    <option value="" selected>Select your designated college department</option>
+                                    <option value="" selected>{{ $user->college }}</option>
                                     <option value="CICT">College of Information and Communication Technology</option>
                                     <option value="CIT">College of Industrial Technology</option>
                                     <option value="CICT">College of Technical and Vocational Technology</option>
@@ -101,7 +101,7 @@
                             <label for="status" class="col-md-4 control-label">Status</label>
                             <div class="col-md-6">
                                 <select name="status" id="status" class="form-control">
-                                    <option value="" selected>School status</option>
+                                    <option value="" selected>{{ $user->status }}</option>
                                     <option value="Student">Student</option>
                                     <option value="Alumnus">Alumnus</option>
                                 </select>
