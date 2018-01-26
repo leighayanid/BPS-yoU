@@ -43,7 +43,7 @@ class UserPolicy
     public function update(User $user)
    { 
         //
-       return $user;
+       return $user->id;
     }
 
     /**

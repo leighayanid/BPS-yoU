@@ -43,10 +43,10 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(UserRequest $request, User $user)
     {
         $user->update($request->all());
-        return redirect('users');
+       return redirect()->route('peninsulares.show', $user->id)->withMessage("User updated.");
     }
 
     /**
